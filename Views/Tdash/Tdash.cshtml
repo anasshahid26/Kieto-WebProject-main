@@ -1,0 +1,632 @@
+﻿@{
+    ViewBag.Title = "Teacher Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="rightSide">
+
+    <!-- Top fixed navigation -->
+    
+
+    <!-- Responsive header -->
+    <div class="resp">
+        <div class="respHead">
+            <a href="index.html" title=""><img src="../images/loginLogo.png" alt=""></a>
+        </div>
+
+        <div class="cLine"></div>
+        <div class="smalldd">
+            <span class="goTo inactive"><img src="../images/icons/light/home.png" alt="">Dashboard</span>
+            <ul class="smallDropdown" style="display: none;">
+                <li><a href="index.html" title=""><img src="../images/icons/light/home.png" alt="">Dashboard</a></li>
+                <li><a href="charts.html" title=""><img src="../images/icons/light/stats.png" alt="">Statistics and charts</a></li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/pencil.png" alt="">Forms stuff<strong>4</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="forms.html" title="">Form elements</a></li>
+                        <li><a href="form_validation.html" title="">Validation</a></li>
+                        <li><a href="form_editor.html" title="">WYSIWYG and file uploader</a></li>
+                        <li class="last"><a href="form_wizards.html" title="">Wizards</a></li>
+                    </ul>
+                </li>
+                <li><a href="ui_elements.html" title=""><img src="../images/icons/light/users.png" alt="">Interface elements</a></li>
+                <li>
+                    <a href="tables.html" title="" class="exp inactive"><img src="../images/icons/light/frames.png" alt="">Tables<strong>3</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="table_static.html" title="">Static tables</a></li>
+                        <li><a href="table_dynamic.html" title="">Dynamic table</a></li>
+                        <li class="last"><a href="table_sortable_resizable.html" title="">Sortable &amp; resizable tables</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/fullscreen.png" alt="">Widgets and grid<strong>2</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="widgets.html" title="">Widgets</a></li>
+                        <li class="last"><a href="grid.html" title="">Grid</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/alert.png" alt="">Error pages<strong>6</strong></a>
+                    <ul class="sub" style="display: none;">
+                        <li><a href="403.html" title="">403 page</a></li>
+                        <li><a href="404.html" title="">404 page</a></li>
+                        <li><a href="405.html" title="">405 page</a></li>
+                        <li><a href="500.html" title="">500 page</a></li>
+                        <li><a href="503.html" title="">503 page</a></li>
+                        <li class="last"><a href="offline.html" title="">Website is offline</a></li>
+                    </ul>
+                </li>
+                <li><a href="file_manager.html" title=""><img src="../images/icons/light/files.png" alt="">File manager</a></li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/create.png" alt="">Other pages<strong>3</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="typography.html" title="">Typography</a></li>
+                        <li><a href="calendar.html" title="">Calendar</a></li>
+                        <li class="last"><a href="gallery.html" title="">Gallery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="cLine"></div>
+    </div>
+
+    <!-- Title area -->
+    <div class="titleArea">
+        <div class="wrapper">
+            <div class="pageTitle">
+                <h5>Dashboard</h5>
+                <span>Do your layouts deserve better than Lorem Ipsum.</span>
+            </div>
+            <div class="middleNav">
+                <ul>
+                    <li class="mUser">
+                        <a title=""><span class="users"></span></a>
+                        <ul class="mSub1">
+                            <li><a href="#" title="">Add user</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="mMessages">
+                        <a title=""><span class="messages"></span></a>
+                        <ul class="mSub2">
+                            <li><a href="#" title="">New tickets<span class="numberRight">8</span></a></li>
+                            <li><a href="#" title="">Pending tickets<span class="numberRight">12</span></a></li>
+                            <li><a href="#" title="">Closed tickets</a></li>
+                        </ul>
+                    </li>
+                    <li class="mFiles"><a href="#" class="tipN" original-title="Or you can use a tooltip"><span class="files"></span></a></li>
+                    <li class="mOrders">
+                        <a title=""><span class="orders"></span><span class="numberMiddle">8</span></a>
+                        <ul class="mSub4">
+                            <li><a href="#" title="">Pending uploads</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Trash</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Page statistics and control buttons area -->
+    <div class="statsRow">
+        <div class="wrapper">
+            <div class="controlB">
+                <ul>
+                    <li><a href="@Url.Action("TestSelect","TestSelect")" title=""><img src="../images/icons/control/32/hire-me.png" alt=""><span>Add New Test</span></a></li>
+                    <li><a href="#" title=""><img src="../images/icons/control/32/suppliers.png" alt=""><span>Edit Test</span></a></li>
+                    <li><a href="#" title=""><img src="../images/icons/control/32/user.png" alt=""><span>Results</span></a></li>
+                    <li><a href="#" title=""><img src="../images/icons/control/32/statistics.png" alt=""><span>Check statistics</span></a></li>
+                    <li><a href="#" title=""><img src="../images/icons/control/32/publish.png" alt=""><span>Scan</span></a></li>
+                    <li><a href="#" title=""><img src="../images/icons/control/32/order-149.png" alt=""><span>Today's list</span></a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Main content wrapper -->
+    <div class="wrapper">
+
+        <!-- Note -->
+        <div class="nNote nInformation hideit">
+            <p><strong>INFORMATION: </strong>Top buttons area has 3 versions - 2 kinds of buttons and statistics. All of them could be viewed on <a href="ui_elements.html" title="">Interface elements page</a></p>
+        </div>
+
+        <!-- Chart -->
+        <div class="widget chartWrapper">
+            <div class="title"><img src="../images/icons/dark/stats.png" alt="" class="titleIcon"><h6>Chart</h6></div>
+            <div class="body"><div class="chart" style="padding: 0px; position: relative;"><canvas class="base" width="950" height="250"></canvas><canvas class="overlay" width="950" height="250" style="position: absolute; left: 0px; top: 0px;"></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:-20px;top:230px;width:86px">0</div><div class="tickLabel" style="position:absolute;text-align:center;left:72px;top:230px;width:86px">2</div><div class="tickLabel" style="position:absolute;text-align:center;left:163px;top:230px;width:86px">4</div><div class="tickLabel" style="position:absolute;text-align:center;left:255px;top:230px;width:86px">6</div><div class="tickLabel" style="position:absolute;text-align:center;left:347px;top:230px;width:86px">8</div><div class="tickLabel" style="position:absolute;text-align:center;left:439px;top:230px;width:86px">10</div><div class="tickLabel" style="position:absolute;text-align:center;left:530px;top:230px;width:86px">12</div><div class="tickLabel" style="position:absolute;text-align:center;left:622px;top:230px;width:86px">14</div><div class="tickLabel" style="position:absolute;text-align:center;left:714px;top:230px;width:86px">16</div><div class="tickLabel" style="position:absolute;text-align:center;left:805px;top:230px;width:86px">18</div><div class="tickLabel" style="position:absolute;text-align:center;left:897px;top:230px;width:86px">20</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:205px;right:932px;width:18px">-1.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:156px;right:932px;width:18px">-0.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:108px;right:932px;width:18px">0.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:59px;right:932px;width:18px">0.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:10px;right:932px;width:18px">1.0</div></div></div><div class="legend"><div style="position: absolute; width: 142px; height: 20px; top: -42px; right: 0px; opacity: 1;"> </div><table style="position:absolute;top:-42px;right:0px;;font-size: 11px; color:#545454"><tbody><tr><td class="legendColorBox"><div style="#ccc"><div style="width:15px;height:0;border:3px solid rgb(172,209,99);overflow:hidden"></div></div></td><td class="legendLabel"><span>sin(x)</span></td><td class="legendColorBox"><div style="#ccc"><div style="width:15px;height:0;border:3px solid rgb(209,138,99);overflow:hidden"></div></div></td><td class="legendLabel"><span>cos(x)</span></td></tr></tbody></table></div></div></div>
+        </div>
+
+        <!-- Widgets -->
+        <div class="widgets">
+            <div class="oneTwo">
+
+                <!-- Partners list widget -->
+                <div class="widget">
+                    <div class="title"><img src="../images/icons/dark/users.png" alt="" class="titleIcon"><h6>Partners list</h6></div>
+                    <ul class="partners">
+                        <li>
+                            <a href="#" title="" class="floatL"><img src="../images/user.png" alt=""></a>
+                            <div class="pInfo">
+                                <a href="#" title=""><strong>Dave Armstrong</strong></a>
+                                <i>Creative director at Google Inc. Zurich</i>
+                            </div>
+                            <div class="pLinks">
+                                <a href="#" class="tipW" original-title="Direct call"><img src="../images/icons/pSkype.png" alt=""></a>
+                                <a href="#" class="tipW" original-title="Send an email"><img src="../images/icons/pEmail.png" alt=""></a>
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                        <li>
+                            <a href="#" title="" class="floatL"><img src="../images/user.png" alt=""></a>
+                            <div class="pInfo">
+                                <a href="#" title=""><strong>Nora McDonald</strong></a>
+                                <i>Lead developer, Alaska</i>
+                            </div>
+                            <div class="pLinks">
+                                <a href="#" class="tipW" original-title="Direct call"><img src="../images/icons/pSkype.png" alt=""></a>
+                                <a href="#" class="tipW" original-title="Send an email"><img src="../images/icons/pEmail.png" alt=""></a>
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                        <li>
+                            <a href="#" title="" class="floatL"><img src="../images/user.png" alt=""></a>
+                            <div class="pInfo">
+                                <a href="#" title=""><strong>Natalie Zimmerman</strong></a>
+                                <i>Actually it's a guy. Yeah, unexpected</i>
+                            </div>
+                            <div class="pLinks">
+                                <a href="#" class="tipW" original-title="Direct call"><img src="../images/icons/pSkype.png" alt=""></a>
+                                <a href="#" class="tipW" original-title="Send an email"><img src="../images/icons/pEmail.png" alt=""></a>
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                        <li>
+                            <a href="#" title="" class="floatL"><img src="../images/user.png" alt=""></a>
+                            <div class="pInfo">
+                                <a href="#" title=""><strong>Maria Paradeux</strong></a>
+                                <i>Very hot secretary, Playboy rockstar</i>
+                            </div>
+                            <div class="pLinks">
+                                <a href="#" class="tipW" original-title="Direct call"><img src="../images/icons/pSkype.png" alt=""></a>
+                                <a href="#" class="tipW" original-title="Send an email"><img src="../images/icons/pEmail.png" alt=""></a>
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Website stats widget -->
+                <div class="widget">
+                    <div class="title"><img src="../images/icons/dark/stats.png" alt="" class="titleIcon"><h6>Website statistics</h6></div>
+                    <table cellpadding="0" cellspacing="0" width="100%" class="sTable">
+                        <thead>
+                            <tr>
+                                <td width="80">Amount</td>
+                                <td>Description</td>
+                                <td width="80">Changes</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="center"><a href="#" title="" class="webStatsLink">980</a></td>
+                                <td>returned visitors</td>
+                                <td><span class="statsPlus">0.32%</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><a href="#" title="" class="webStatsLink">1545</a></td>
+                                <td>new registrations</td>
+                                <td><span class="statsMinus">82.3%</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><a href="#" title="" class="webStatsLink">457</a></td>
+                                <td>new affiliates registrations</td>
+                                <td><span class="statsPlus">100%</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><a href="#" title="" class="webStatsLink">9543</a></td>
+                                <td>new visitors</td>
+                                <td><span class="statsPlus">4.99%</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><a href="#" title="" class="webStatsLink">354</a></td>
+                                <td>new pending comments</td>
+                                <td><span class="statsMinus">9.67%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Latest update widget -->
+                <div class="widget">
+                    <div class="title"><img src="../images/icons/dark/refresh4.png" alt="" class="titleIcon"><h6>Latest updates</h6></div>
+
+                    <div class="updates">
+                        <div class="newUpdate">
+                            <div class="uDone">
+                                <a href="#" title=""><strong>A new server is on the board!</strong></a>
+                                <span>We've just set up a new server. Our gurus ...</span>
+                            </div>
+                            <div class="uDate"><span class="uDay">08</span>feb</div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="newUpdate">
+                            <span class="uAlert">
+                                <a href="#" title=""><strong>[ URGENT ] ex.ua was closed by government</strong></a>
+                                <span>But already everything was solved. It will ...</span>
+                            </span>
+                            <span class="uDate"><span class="uDay">08</span>feb</span>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="newUpdate">
+                            <span class="uDone">
+                                <a href="#" title=""><strong>The goal was reached!</strong></a>
+                                <span>We just passed 1000 sales! Congrats to all</span>
+                            </span>
+                            <span class="uDate"><span class="uDay">07</span>feb</span>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="newUpdate">
+                            <span class="uNotice">
+                                <a href="#" title=""><strong>Meat a new team member - Don Corleone</strong></a>
+                                <span>Very dyplomatic and flexible sales manager</span>
+                            </span>
+                            <span class="uDate"><span class="uDay">06</span>feb</span>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 columns widgets -->
+            <div class="oneTwo">
+
+                <!-- Search -->
+                <div class="searchWidget">
+                    <form action="" id="820592864">
+                        <input type="text" name="search" placeholder="Enter search text...">
+                        <input type="submit" name="find" value="">
+                    </form>
+                </div>
+
+                <!-- Purchase info widget -->
+                <div class="widget">
+                    <div class="title">
+                        <img src="../images/icons/dark/money.png" alt="" class="titleIcon">
+                        <h6>Purchase info</h6>
+                        <div class="topIcons">
+                            <a href="#" class="tipS" original-title="Download statement"><img src="../images/icons/downloadTop.png" alt=""></a>
+                            <a href="#" class="tipS" original-title="Print invoice"><img src="../images/icons/printTop.png" alt=""></a>
+                            <a href="#" class="tipS" original-title="Edit"><img src="../images/icons/editTop.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="newOrder">
+                        <div class="userRow">
+                            <a href="#" title=""><img src="../images/user.png" alt="" class="floatL"></a>
+                            <ul class="leftList">
+                                <li><a href="#" title=""><strong>Julia Maria Shine</strong></a></li>
+                                <li>Order status:</li>
+                            </ul>
+                            <ul class="rightList">
+                                <li><a href="#" title=""> <strong>#2112</strong></a></li>
+                                <li class="orderIcons"><span class="oUnfinished"></span><span class="oShipped tipN" original-title="Shipped on Feb 2nd, 2012"></span><span class="oPaid tipN" original-title="Paid on Feb 1st, 2012"></span></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="cLine"></div>
+
+                        <div class="orderRow">
+                            <ul class="leftList">
+                                <li>Date and time:</li>
+                                <li>Subtotal amount:</li>
+                                <li>Taxes</li>
+                            </ul>
+                            <ul class="rightList">
+                                <li><strong>Jan 31, 2012</strong> |  12:51</li>
+                                <li><strong class="green">$5,514.36</strong></li>
+                                <li><strong class="orange">- $1,158.54</strong></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="cLine"></div>
+                        <div class="totalAmount"><h6 class="floatL blue">Total:</h6><h6 class="floatR blue">$12,157.99</h6><div class="clear"></div></div>
+                    </div>
+                </div>
+
+                <!-- New users widget -->
+                <div class="widget">
+                    <div class="title"><img src="../images/icons/dark/add.png" alt="" class="titleIcon"><h6>New users</h6></div>
+                    <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="../images/user.png" alt=""></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>Eugene Kopyov</strong></a></li>
+                            <li><a href="#" title="">eugene@kopyov.com</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong>$12,248.21</strong></a></li>
+                            <li><a href="#" class="red">12 purchases</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="cLine"></div>
+
+                    <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="../images/user.png" alt=""></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>Valery Dow</strong></a></li>
+                            <li><a href="#" title="">valery@dow.com</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong>$4,048</strong></a></li>
+                            <li><a href="#" class="red">96 purchases</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="cLine"></div>
+
+                    <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="../images/user.png" alt=""></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>Liam Paterson</strong></a></li>
+                            <li><a href="#" title="">liam@paterson.com</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong>$94,127.20</strong></a></li>
+                            <li><a href="#" class="red">128 purchases</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="cLine"></div>
+
+                    <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="../images/user.png" alt=""></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>Steve Downey</strong></a></li>
+                            <li><a href="#" title="">steve@downey.com</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong>$2,483.02</strong></a></li>
+                            <li><a href="#" class="red">0 purchases</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <!-- My tasks table widget -->
+                <div class="widget">
+                    <div class="title"><img src="../images/icons/dark/timer.png" alt="" class="titleIcon"><h6>My tasks</h6><div class="num"><a href="#" class="blueNum">+245</a></div></div>
+                    <table cellpadding="0" cellspacing="0" width="100%" class="sTable taskWidget">
+                        <thead>
+                            <tr>
+                                <td>Description</td>
+                                <td width="100">Status</td>
+                                <td width="60">Acts</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="taskPr"><a href="#" title="">Finish design</a></td>
+                                <td><span class="green f11">in progress</span></td>
+                                <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td class="taskP"><a href="#" title="">Get HTML done</a></td>
+                                <td><span class="lGrey f11">pending</span></td>
+                                <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td class="taskP"><a href="#" title="">Connect jQuery stuff</a></td>
+                                <td><span class="lGrey f11">pending</span></td>
+                                <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td class="taskD"><a href="#" title="">Start beta testing</a></td>
+                                <td><span class="red f11">done</span></td>
+                                <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <!-- Events calendar -->
+        <div class="widget">
+            <div class="title"><img src="../images/icons/dark/monthCalendar.png" alt="" class="titleIcon"><h6>Events</h6></div>
+            <div class="calendar fc"><div class="fc-header" style="width:100%"><div><div class="fc-header-left"><span class="fc-button fc-button-prev fc-state-default fc-corner-left"><span class="fc-button-inner"><span class="fc-button-content"></span></span></span><span class="fc-button fc-button-next fc-state-default fc-corner-right"><span class="fc-button-inner"><span class="fc-button-content"></span></span></span></div><div class="fc-header-center"><span class="fc-header-title"><strong>May 2015</strong></span></div><div class="fc-header-right"><span class="fc-button fc-button-month fc-state-default fc-corner-left fc-state-active"><span class="fc-button-inner"><span class="fc-button-content">month</span></span></span><span class="fc-button fc-button-basicWeek fc-state-default"><span class="fc-button-inner"><span class="fc-button-content">week</span></span></span><span class="fc-button fc-button-basicDay fc-state-default fc-corner-right"><span class="fc-button-inner"><span class="fc-button-content">day</span></span></span></div></div></div><div class="fc-content" style="position: relative; min-height: 1px;"><div class="fc-view fc-view-month fc-grid" style="position: relative;" unselectable="on"><table class="fc-border-separate" style="width:100%" cellspacing="0"><thead><tr class="fc-first fc-last"><th class="fc-sun fc-widget-header fc-first" style="width: 139px;">Sun</th><th class="fc-mon fc-widget-header" style="width: 138px;">Mon</th><th class="fc-tue fc-widget-header" style="width: 138px;">Tue</th><th class="fc-wed fc-widget-header" style="width: 138px;">Wed</th><th class="fc-thu fc-widget-header" style="width: 138px;">Thu</th><th class="fc-fri fc-widget-header" style="width: 138px;">Fri</th><th class="fc-sat fc-widget-header fc-last">Sat</th></tr></thead><tbody><tr class="fc-week0 fc-first"><td class="fc-sun fc-widget-content fc-day0 fc-first fc-other-month"><div style="min-height: 116px;"><div class="fc-day-number">26</div><div class="fc-day-content"><div style="position: relative; height: 24px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day1 fc-other-month"><div><div class="fc-day-number">27</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day2 fc-other-month"><div><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day3 fc-other-month"><div><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day4 fc-other-month"><div><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day5"><div><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day6 fc-last"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week1"><td class="fc-sun fc-widget-content fc-day7 fc-first"><div style="min-height: 116px;"><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position: relative; height: 24px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day8"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day9"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day10"><div><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day11"><div><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day12"><div><div class="fc-day-number">8</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day13 fc-last"><div><div class="fc-day-number">9</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week2"><td class="fc-sun fc-widget-content fc-day14 fc-first fc-state-highlight fc-today"><div style="min-height: 116px;"><div class="fc-day-number">10</div><div class="fc-day-content"><div style="position: relative; height: 24px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day15"><div><div class="fc-day-number">11</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day16"><div><div class="fc-day-number">12</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day17"><div><div class="fc-day-number">13</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day18"><div><div class="fc-day-number">14</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day19"><div><div class="fc-day-number">15</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day20 fc-last"><div><div class="fc-day-number">16</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week3"><td class="fc-sun fc-widget-content fc-day21 fc-first"><div style="min-height: 116px;"><div class="fc-day-number">17</div><div class="fc-day-content"><div style="position: relative; height: 24px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day22"><div><div class="fc-day-number">18</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day23"><div><div class="fc-day-number">19</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day24"><div><div class="fc-day-number">20</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day25"><div><div class="fc-day-number">21</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day26"><div><div class="fc-day-number">22</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day27 fc-last"><div><div class="fc-day-number">23</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week4"><td class="fc-sun fc-widget-content fc-day28 fc-first"><div style="min-height: 116px;"><div class="fc-day-number">24</div><div class="fc-day-content"><div style="position: relative; height: 57px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day29"><div><div class="fc-day-number">25</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day30"><div><div class="fc-day-number">26</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day31"><div><div class="fc-day-number">27</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day32"><div><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day33"><div><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day34 fc-last"><div><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week5 fc-last"><td class="fc-sun fc-widget-content fc-day35 fc-first"><div style="min-height: 116px;"><div class="fc-day-number">31</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day36 fc-other-month"><div><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day37 fc-other-month"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day38 fc-other-month"><div><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day39 fc-other-month"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day40 fc-other-month"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day41 fc-last fc-other-month"><div><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr></tbody></table><div style="position:absolute;z-index:8;top:0;left:0"><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 698px; width: 132px; top: 54px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-title">All day event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left" style="position: absolute; z-index: 8; left: 837px; width: 140px; top: 54px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-time">4p </span><span class="fc-event-title">Repeating event</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 281px; width: 549px; top: 171px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-title">Long event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-right" style="position: absolute; z-index: 8; left: 0px; width: 136px; top: 171px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-title">Repeating event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left" style="position: absolute; z-index: 8; left: 837px; width: 140px; top: 171px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-time">4p </span><span class="fc-event-title">Repeating event</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 559px; width: 271px; top: 288px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-time">12p </span><span class="fc-event-title">Lunch</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-right" style="position: absolute; z-index: 8; left: 0px; width: 136px; top: 288px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-title">Repeating event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 142px; width: 271px; top: 405px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-time">12a </span><span class="fc-event-title">Birthday PARTY</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><a href="http://themeforest.net/user/Kopyov" class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 420px; width: 410px; top: 522px;"><div class="fc-event-inner fc-event-skin"><span class="fc-event-title">Clackable</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></a><div class="fc-event fc-event-skin fc-event-hori fc-event-draggable fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 837px; background-color: rgb(92, 144, 181); border-color: rgb(92, 144, 181); width: 136px; top: 522px;"><div class="fc-event-inner fc-event-skin" style="background-color:#5c90b5;border-color:#5c90b5"><span class="fc-event-time">10:30a </span><span class="fc-event-title">Background color could be changed</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div></div></div></div></div>
+        </div>
+
+        <!-- Media table -->
+        <div class="widget">
+            <div class="title"><span class="titleIcon"><div class="checker" id="uniform-titleCheck"><span><input type="checkbox" id="titleCheck" name="titleCheck" style="opacity: 0;"></span></div></span><h6>Media table</h6></div>
+            <table cellpadding="0" cellspacing="0" width="100%" class="sTable withCheck mTable" id="checkAll">
+                <thead>
+                    <tr>
+                        <td><img src="../images/icons/tableArrows.png" alt=""></td>
+                        <td>Image</td>
+                        <td class="sortCol header"><div>Description<span></span></div></td>
+                        <td class="sortCol header"><div>Date<span></span></div></td>
+                        <td>File info</td>
+                        <td>Actions</td>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <div class="itemActions">
+                                <label>Apply action:</label>
+                                <div class="selector" id="uniform-undefined">
+                                    <span>Select action...</span><select style="opacity: 0;">
+                                        <option value="">Select action...</option>
+                                        <option value="Edit">Edit</option>
+                                        <option value="Delete">Delete</option>
+                                        <option value="Move">Move somewhere</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tPagination">
+                                <ul>
+                                    <li class="prev"><a href="#" title=""></a></li>
+                                    <li><a href="#" title="">1</a></li>
+                                    <li><a href="#" title="">2</a></li>
+                                    <li><a href="#" title="">3</a></li>
+                                    <li><a href="#" title="">4</a></li>
+                                    <li><a href="#" title="">5</a></li>
+                                    <li><a href="#" title="">6</a></li>
+                                    <li>...</li>
+                                    <li><a href="#" title="">20</a></li>
+                                    <li class="next"><a href="#" title=""></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td><div class="checker" id="uniform-titleCheck2"><span><input type="checkbox" id="titleCheck2" name="checkRow" style="opacity: 0;"></span></div></td>
+                        <td align="center" style="border-left-color: rgb(203, 203, 203);"><a href="images/big.png" title="" rel="lightbox"><img src="../images/user.png" alt=""></a></td>
+                        <td><a href="#" title="">Image1 description</a></td>
+                        <td align="center">Feb 12, 2012. 12:28</td>
+                        <td class="fileInfo"><span><strong>Size:</strong> 215 Kb</span><span><strong>Format:</strong> .jpg</span></td>
+                        <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td><div class="checker" id="uniform-titleCheck3"><span><input type="checkbox" id="titleCheck3" name="checkRow" style="opacity: 0;"></span></div></td>
+                        <td align="center" style="border-left-color: rgb(203, 203, 203);"><a href="images/big.png" title="" rel="lightbox"><img src="../images/user.png" alt=""></a></td>
+                        <td><a href="#" title="">Image2 description</a></td>
+                        <td align="center">Feb 12, 2012. 12:30</td>
+                        <td class="fileInfo"><span><strong>Size:</strong> 215 Kb</span><span><strong>Format:</strong> .jpg</span></td>
+                        <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td><div class="checker" id="uniform-titleCheck4"><span><input type="checkbox" id="titleCheck4" name="checkRow" style="opacity: 0;"></span></div></td>
+                        <td align="center" style="border-left-color: rgb(203, 203, 203);"><a href="images/big.png" title="" rel="lightbox"><img src="../images/user.png" alt=""></a></td>
+                        <td><a href="#" title="">Image3 description</a></td>
+                        <td align="center">Feb 11, 2012. 02:30</td>
+                        <td class="fileInfo"><span><strong>Size:</strong> 215 Kb</span><span><strong>Format:</strong> .jpg</span></td>
+                        <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td><div class="checker" id="uniform-titleCheck5"><span><input type="checkbox" id="titleCheck5" name="checkRow" style="opacity: 0;"></span></div></td>
+                        <td align="center" style="border-left-color: rgb(203, 203, 203);"><a href="images/big.png" title="" rel="lightbox"><img src="../images/user.png" alt=""></a></td>
+                        <td><a href="#" title="">Image4 description</a></td>
+                        <td align="center">Feb 12, 2012. 12:28</td>
+                        <td class="fileInfo"><span><strong>Size:</strong> 215 Kb</span><span><strong>Format:</strong> .jpg</span></td>
+                        <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td><div class="checker" id="uniform-titleCheck6"><span><input type="checkbox" id="titleCheck6" name="checkRow" style="opacity: 0;"></span></div></td>
+                        <td align="center" style="border-left-color: rgb(203, 203, 203);"><a href="images/big.png" title="" rel="lightbox"><img src="../images/user.png" alt=""></a></td>
+                        <td><a href="#" title="">Image5 description</a></td>
+                        <td align="center">Feb 12, 2012. 12:28</td>
+                        <td class="fileInfo"><span><strong>Size:</strong> 215 Kb</span><span><strong>Format:</strong> .jpg</span></td>
+                        <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="../images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="../images/icons/remove.png" alt=""></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dynamic table -->
+        <div class="widget">
+            <div class="title"><img src="../images/icons/dark/full2.png" alt="" class="titleIcon"><h6>Dynamic table</h6></div>
+            <div class="dataTables_wrapper">
+                <div class=""><div class="dataTables_length"><label><span class="itemsPerPage">Items per page:</span> <div class="selector" id="uniform-tableFilter"><span>10</span><select name="tableFilter" id="tableFilter" style="opacity: 0;"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div></label></div></div><table cellpadding="0" cellspacing="0" border="0" class="display dTable">
+                    <thead>
+                        <tr><th class="ui-state-default" rowspan="1" colspan="1" style="width: 193px;"><div class="DataTables_sort_wrapper">Rendering engine<span class="DataTables_sort_icon css_right ui-icon ui-icon-triangle-1-n"></span></div></th><th class="ui-state-default" rowspan="1" colspan="1" style="width: 298px;"><div class="DataTables_sort_wrapper">Browser<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div></th><th class="ui-state-default" rowspan="1" colspan="1" style="width: 271px;"><div class="DataTables_sort_wrapper">Platform(s)<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div></th><th class="ui-state-default" rowspan="1" colspan="1" style="width: 172px;"><div class="DataTables_sort_wrapper">Engine version<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div></th></tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="gradeA odd">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td class="center">1.7</td>
+                        </tr>
+                        <tr class="gradeA even">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Firefox 1.5</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td class="center">1.8</td>
+                        </tr>
+                        <tr class="gradeA odd">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Firefox 2.0</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td class="center">1.8</td>
+                        </tr>
+                        <tr class="gradeA even">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Firefox 3.0</td>
+                            <td>Win 2k+ / OSX.3+</td>
+                            <td class="center">1.9</td>
+                        </tr>
+                        <tr class="gradeA odd">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Camino 1.0</td>
+                            <td>OSX.2+</td>
+                            <td class="center">1.8</td>
+                        </tr>
+                        <tr class="gradeA even">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Camino 1.5</td>
+                            <td>OSX.3+</td>
+                            <td class="center">1.8</td>
+                        </tr>
+                        <tr class="gradeA odd">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Netscape 7.2</td>
+                            <td>Win 95+ / Mac OS 8.6-9.2</td>
+                            <td class="center">1.7</td>
+                        </tr>
+                        <tr class="gradeA even">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Netscape Browser 8</td>
+                            <td>Win 98SE+</td>
+                            <td class="center">1.7</td>
+                        </tr>
+                        <tr class="gradeA odd">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Netscape Navigator 9</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td class="center">1.8</td>
+                        </tr>
+                        <tr class="gradeA even">
+                            <td class=" sorting_1">Gecko</td>
+                            <td>Mozilla 1.0</td>
+                            <td>Win 95+ / OSX.1+</td>
+                            <td class="center">1</td>
+                        </tr>
+                    </tbody>
+                </table><div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix"><div class="dataTables_filter"><label><span class="itemsPerPage">Search:</span> <input type="text" placeholder="type here..."><div class="srch"></div></label></div><div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers"><span class="toFirst ui-corner-tl ui-corner-bl fg-button ui-button ui-state-disabled">First</span><span class="previous fg-button ui-button ui-state-disabled">Prev</span><span><span class="fg-button ui-button ui-state-disabled">1</span><span class="fg-button ui-button">2</span><span class="fg-button ui-button">3</span><span class="fg-button ui-button">4</span><span class="fg-button ui-button">5</span></span><span class="next fg-button ui-button">Next</span><span class="last ui-corner-tr ui-corner-br fg-button ui-button">Last</span></div></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer line -->
+    <div id="footer">
+        <div class="wrapper">As usually all rights reserved. And as usually brought to you by <a href="http://themeforest.net/user/Kopyov?ref=kopyov" title="">Eugene Kopyov</a></div>
+    </div>
+
+</div>

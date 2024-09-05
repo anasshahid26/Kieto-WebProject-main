@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "MasterDash";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>MasterDash</h2>
+<form action="giverights" method="post">
+    <p>there are tottaly 2 rights of user one is TEACHER RIGHTS another is STUDENTS RIGHTS</p>
+
+    <div class="formRow">
+        <label>SELECT USER:</label>
+        <div class="formRight">
+            <div class="selector" id="uniform-undefined">
+                <select name="user" id="user">
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+
+
+                </select>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="formRow">
+        <label>SELECT USER RIGHTS:</label>
+        <div class="formRight">
+            <div class="selector" id="uniform-undefined">
+                <select name="rights" id="rights">
+                    <option value="addtest">ADD Test</option>
+                    <option value="edittest">edit Test</option>
+                    <option value="deletetest">delete Test</option>
+                    <option value="studentsCredentials">studentCredentials</option>
+                    <option value="solvetest">solve Test</option>
+                    <option value="seeresult">see result</option>
+                    <option value="studentlogin">studentLogin</option>
+
+
+
+                </select>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <input type="submit" value="submit" />
+
+</form>

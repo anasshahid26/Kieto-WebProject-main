@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "../Shared/_Layout2.cshtml";
+}
+
+<div id="rightSide" style="float: right;
+margin-top: 15%;
+margin-right: 48%;">
+    @{string tname = Request.QueryString["testname"];
+      string sname = Request.QueryString["student_name"];
+
+
+    }
+
+
+    @using WebProject.Models
+
+    @*<p>@SDash.GetDetails(tname)</p>*@
+
+    @{
+
+        SDash sd = new SDash();
+
+        sd.GetDetails(tname);
+
+        string testtype = sd.testtype;
+        string testname = sd.testname;
+        string testques = sd.question;
+        string testtime = sd.time;
+        <h3>Welcome @sname to the  @testname  Test</h3>
+        <h3>Test Type : @testtype</h3>
+        <h3>Total Number Of Questions : @testques</h3>
+        <h3>Total Time To complete This Test : @testtime</h3>
+        <p>Please press Start to start your Test!</p>
+
+
+    }
+
+    <form id="signup" action="start_test" method="post" class="reg-form">
+        <div class="controlB">
+            <input name="tname" type="hidden" value="@tname" />
+            <input name="sname" type="hidden" value="@sname" />
+            <input name="tesques" type="hidden" value="@testques" />
+            <input name="testtime" type="hidden" value="@testtime" />
+        </div>
+        <input type="submit" value="Start Test" />
+        </form>
+</div>

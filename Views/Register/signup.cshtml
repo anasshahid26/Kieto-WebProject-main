@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "register";
+}
+@{
+    Layout = null;
+
+}
+
+
+
+
+
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+
+
+    @Styles.Render("~/form.css")
+    @Scripts.Render("~/form.js")
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Kiteo Sign Up</title>
+    <meta name="description" content="">
+    <meta name="author" content="WebThemez">
+    <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!--[if lte IE 8]>
+            <script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+        <![endif]-->
+    <link rel="stylesheet" href="form.css" type="text/css" />
+
+    <script type="text/javascript">
+        H5F.listen(window, "load", function () {
+            H5F.setup(document.getElementById("signup"));
+        }, false);
+    </script>
+
+</head>
+<body>
+
+    <form id="signup" action="signu" method="post" class="reg-form">
+
+
+        <fieldset>
+            <img id="img-logo" src="../images/logo.png">
+            <h1 class="reg-heading">REGISTRATION</h1>
+            <ol>
+                <li>
+                    <label for="firstname">First Name *</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" />
+                </li>
+                <li>
+                    <label for="lastname">last name *</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="last name" required />
+                </li>
+            </ol>
+
+
+
+            <ol>
+                <li>
+                    <label for="email">email *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. swapnil@example.com" title="please enter a valid email" required />
+                    <p class="validation01">
+                        <span class="invalid">please enter a valid email address e.g. swapnil@example.com</span>
+                        <span class="valid">your email address is now valid</span>
+                    </p>
+                </li>
+                <li>
+                    <label for="url">website *</label>
+                    <input type="url" name="url" id="url" placeholder="e.g. http://www.html5andcss3.org" title="please enter a valid url" required />
+                    <p class="validation01">
+                        <span class="invalid">please enter a valid url address e.g. http://www.html5andcss3.org</span>
+                        <span class="valid">your url address is now valid</span>
+                    </p>
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <label for="password">password *</label>
+                    <input id="password1" name="password1" type="password" title="minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\w+))(?![.\n])(?=.*[a-z])(?=.*[a-z]).*" required />
+                    <p class="validation01">
+                        <span class="invalid">minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+                        <span class="valid">your password meets our requirements, thank you.</span>
+                    </p>
+                </li>
+                <li>
+                    <label for="password">confirm password *</label>
+                    <input id="password" name="password" type="password" title="minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\w+))(?![.\n])(?=.*[a-z])(?=.*[a-z]).*" required />
+                    <p class="validation01">
+                        <span class="invalid">minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+                        <span class="valid">your password meets our requirements, thank you.</span>
+                    </p>
+                </li>
+            </ol>
+
+
+            <ol>
+                <li>
+                    <label for="tel">mobile *</label>
+                    <input type="tel" id="tel" name="tel" pattern="\d{10}" placeholder="please enter a ten digit phone number" required />
+                    <p class="validation01">
+                        <span class="invalid">no spaces or brackets e.g. 9999999999</span>
+                        <span class="valid">your mobile number is valid</span>
+                    </p>
+                </li>
+            </ol>
+
+            <ol>
+                <li>
+                    <label for="state">country *</label>
+                    <select name="state" id="state">
+                        <option>africa</option>
+                        <option>america</option>
+                        <option>australia</option>
+                        <option>china</option>
+                        <option>england</option>
+                        <option>japan</option>
+                        <option selected>india</option>
+                        <option>indonesia</option>
+                    </select>
+                </li>
+            </ol>
+
+            <ol>
+                <li>
+                    <label for="postcode">post code *</label>
+                    <input id="postcode" name="postcode" type="number" min="10001" max="999999" maxlength="6" required />
+                    <p class="validation01">
+                        <span class="invalid">your postcode is out of range between 10001 - 999999</span>
+                        <span class="valid">your postcode is in the correct range</span>
+                    </p>
+                </li>
+            </ol>
+
+            <ol>
+                <li>
+                    <label for="address">address *</label>
+                    <textarea id="address" name="address" type="text" required></textarea>
+                </li>
+            </ol>
+
+            <ol>
+
+                <li>
+                    <label for="username">geender *</label>
+                    <input id="radio" name="radio" type="radio" required />male <input id="radio" name="radio" type="radio" required />female
+                </li>
+                <li>
+                    <label for="username">agree<a href="#">terms & condition</a>*</label>
+                    <input id="checkbox" name="checkbox" type="checkbox" required />
+                </li>
+            </ol>
+
+
+        </fieldset>
+
+
+        <input type="submit" value="Sign up" class="sub-but valid" />
+    </form>
+</body>
+</html>

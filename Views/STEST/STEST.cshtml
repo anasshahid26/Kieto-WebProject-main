@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "STEST";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div id="rightSide" style="float: right;
+margin-top: 15%;
+margin-right: 48%;">
+
+    @{ System.Timers.Timer aTimer = new System.Timers.Timer(600000) { AutoReset = false };
+
+       aTimer = new System.Timers.Timer(600000);
+       aTimer.Interval = 600000;
+       double counter = aTimer.Interval;
+
+       counter++;
+       if (counter >= 600000)
+       {
+           
+          
+       }
+      
+      }
+
+    @using WebProject.Models
+    @{
+        
+        
+        string tname = Request.QueryString["testname"];
+        string sname = Request.QueryString["sname"];
+    
+    
+        
+        STEST st= new STEST();
+        st.quest1(tname);
+        string qu1=st.q1;
+        string aa = st.aa;
+        string ab = st.ab;
+        string ac = st.ac;
+        string ad = st.ad;
+       
+      
+      
+    }
+
+
+
+    <div id="Question">
+        <H4>@st.q1</H4>
+        <h6>Option A: @aa</h6>
+        <h6>Option B: @ab</h6>
+        <h6>Option C: @ac</h6>
+        <h6>Option D: @ad</h6>
+        
+
+
+
+    </div>
+
+    <form name="ansform" id="myform" action="LongRunningDemoProcess" method="post">
+        <input name="tname" type="hidden" value="@tname" />
+        <input name="qu1" type="hidden" value="@qu1.ToString()" />
+        <input name="sname" type="hidden" value="@sname">
+        <div class="formRow">
+            <label>Select Your Answer:</label>
+            <div class="formRight">
+                <div class="selector" id="uniform-undefined">
+                    <span>Usual select dropdown</span><select name="correct">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <input type="submit" value="submit" name="submit" id="process" class="redB">
+
+    </form>
+
+
+
+</div>
+
+
+
+@*Put it out here instead!*@
+<div id="divProcessing">
+    <p>Processing, please wait . . . <img src="../../Content/ajax-loader.gif"></p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+           
+
+
+            // Hide the "busy" Gif at load:
+            $("#divProcessing").hide();
+
+            $("#myform").on("submit", function (event) {
+                event.preventDefault();
+
+                // Show the "busy" Gif:
+                $("#divProcessing").show();
+                var url = $(this).attr("action");
+                var formData = $(this).serialize();
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    data: formData,
+                    dataType: "json",
+                    success: function (resp) {
+
+                        // Hide the "busy" gif:
+                        $("#divProcessing").hide();
+                       // var results = document.getElementById("Question");
+                        // Do something useful with the data:
+                        $(resp + "asd").appendTo("#Question");
+                      
+                    }
+                })
+            });
+        });
+    </script>
+}
+

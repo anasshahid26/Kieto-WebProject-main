@@ -1,0 +1,153 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>Crown - premium responsive admin template for backend systems</title>
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/spinner/ui.spinner.js"></script>
+    <script type="text/javascript" src="../js/plugins/spinner/jquery.mousewheel.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/charts/excanvas.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/charts/jquery.flot.js"></script>
+    <script type="text/javascript" src="../js/plugins/charts/jquery.flot.orderBars.js"></script>
+    <script type="text/javascript" src="../js/plugins/charts/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="../js/plugins/charts/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="../js/plugins/charts/jquery.sparkline.min.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/forms/uniform.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/jquery.cleditor.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/jquery.validationEngine-en.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/jquery.tagsinput.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/autogrowtextarea.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/jquery.dualListBox.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/jquery.inputlimiter.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/forms/chosen.jquery.min.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/wizard/jquery.form.js"></script>
+    <script type="text/javascript" src="../js/plugins/wizard/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/wizard/jquery.form.wizard.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/uploader/plupload.js"></script>
+    <script type="text/javascript" src="../js/plugins/uploader/plupload.html5.js"></script>
+    <script type="text/javascript" src="../js/plugins/uploader/plupload.html4.js"></script>
+    <script type="text/javascript" src="../js/plugins/uploader/jquery.plupload.queue.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/tables/datatable.js"></script>
+    <script type="text/javascript" src="../js/plugins/tables/tablesort.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/tables/resizable.min.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/ui/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.collapsible.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.progress.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.timeentry.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.colorpicker.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.breadcrumbs.js"></script>
+    <script type="text/javascript" src="../js/plugins/ui/jquery.sourcerer.js"></script>
+
+    <script type="text/javascript" src="../js/plugins/calendar.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/elfinder.min.js"></script>
+
+    <script type="text/javascript" src="../js/custom.js"></script>
+
+    <script type="text/javascript" src="../js/charts/chart.js"></script>
+
+    <!-- Shared on MafiaShare.net  --><!-- Shared on MafiaShare.net  -->
+</head>
+
+<body>
+    <!-- Left side content -->
+    <div id="leftSide">
+        <div class="logo"><a href="index.html"><img src="../images/logo.png" alt="" /></a></div>
+
+        <div class="sidebarSep mt0"></div>
+
+        <!-- Search widget -->
+        <form action="" class="sidebarSearch">
+            <input type="text" name="search" placeholder="search..." id="ac" />
+            <input type="submit" value="" />
+        </form>
+
+        <div class="sidebarSep"></div>
+
+        <!-- General balance widget -->
+        <div class="genBalance">
+            <a href="#" title="" class="amount">
+                <span>General balance:</span>
+                <span class="balanceAmount">$10,900.36</span>
+            </a>
+            <a href="#" title="" class="amChanges">
+                <strong class="sPositive">+0.6%</strong>
+            </a>
+        </div>
+
+        <!-- Next update progress widget -->
+        <div class="nextUpdate">
+            <ul>
+                <li>Next update in:</li>
+                <li>23 hrs 14 min</li>
+            </ul>
+            <div class="pWrapper"><div class="progressG" title="78%"></div></div>
+        </div>
+
+        <div class="sidebarSep"></div>
+
+        <!-- Left navigation -->
+        <ul id="menu" class="nav">
+            <li class="dash"><a href="@Url.Action("Tdash","Tdash")" title="" class="active"><span>Dashboard</span></a></li>
+           
+            
+            <li class="ui"><a href="@Url.Action("TestSelect", "TestSelect")" title=""><span>Add Test</span></a></li>
+            <li class="ui"><a href="ui_elements.html" title=""><span>Edit Test</span></a></li>
+            <li class="ui"><a href="ui_elements.html" title=""><span>Result Test</span></a></li>
+            <li class="ui"><a href="ui_elements.html" title=""><span>Check Statistic</span></a></li>
+            <li class="ui"><a href="ui_elements.html" title=""><span>Scan</span></a></li>
+            <li class="ui"><a href="ui_elements.html" title=""><span>Today's List</span></a></li>
+            
+          
+           
+                   </ul>
+    </div>
+
+    <div id="rightSide">
+
+        <div class="topNav">
+            <div class="wrapper">
+                <div class="welcome"><a href="#" title=""><img src="../images/userPic.png" alt="" /></a><span>Howdy, Eugene!</span></div>
+                <div class="userNav">
+                    <ul>
+                        <li><a href="#" title=""><img src="../images/icons/topnav/profile.png" alt="" /><span>Profile</span></a></li>
+                        <li><a href="#" title=""><img src="../images/icons/topnav/tasks.png" alt="" /><span>Tasks</span></a></li>
+                        <li class="dd">
+                            <a title=""><img src="../images/icons/topnav/messages.png" alt="" /><span>Messages</span><span class="numberTop">8</span></a>
+                            <ul class="userDropdown">
+                                <li><a href="#" title="" class="sAdd">new message</a></li>
+                                <li><a href="#" title="" class="sInbox">inbox</a></li>
+                                <li><a href="#" title="" class="sOutbox">outbox</a></li>
+                                <li><a href="#" title="" class="sTrash">trash</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" title=""><img src="../images/icons/topnav/settings.png" alt="" /><span>Settings</span></a></li>
+                        <li><a href="login.html" title=""><img src="../images/icons/topnav/logout.png" alt="" /><span>Logout</span></a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    @RenderBody();
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

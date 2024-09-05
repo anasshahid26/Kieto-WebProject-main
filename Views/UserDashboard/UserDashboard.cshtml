@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "UserDashboard";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div class="Righ" style="float: right; margin-right: 44%; margin-top: 10%;">
+
+    @using WebProject.Models;
+
+    <h2>UserDashboard</h2>
+    @{string uname = Request.QueryString["usernaem"];
+
+    model_user_dash md = new model_user_dash();
+    md.username = uname;
+
+    md.Getuserrights();
+    md.Getrights();
+    string rightname = md.right_name.ToString();
+    string right = md.rights.ToString();
+
+
+
+    <h1>Welcome User @uname</h1>
+
+        <h1>YOUR RIGHT IS @rightname</h1>
+
+        <h1>right no.1 @right</h1>
+
+    }
+
+
+    @{
+
+
+
+
+
+
+
+
+    }
+
+</div>

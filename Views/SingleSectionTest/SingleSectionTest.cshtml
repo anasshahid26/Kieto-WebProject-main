@@ -1,0 +1,182 @@
+﻿@{
+    ViewBag.Title = "   ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="rightSide">
+
+    <!-- Top fixed navigation -->
+    
+
+    <!-- Responsive header -->
+    <div class="resp">
+        <div class="respHead">
+            <a href="index.html" title=""><img src="../images/loginLogo.png" alt=""></a>
+        </div>
+
+        <div class="cLine"></div>
+        <div class="smalldd">
+            <span class="goTo inactive"><img src="../images/icons/light/alert.png" alt="">Validation engine</span>
+            <ul class="smallDropdown" style="display: none;">
+                <li><a href="index.html" title=""><img src="../images/icons/light/home.png" alt="">Dashboard</a></li>
+                <li><a href="charts.html" title=""><img src="../images/icons/light/stats.png" alt="">Statistics and charts</a></li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/pencil.png" alt="">Forms stuff<strong>4</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="forms.html" title="">Form elements</a></li>
+                        <li><a href="form_validation.html" title="">Validation</a></li>
+                        <li><a href="form_editor.html" title="">WYSIWYG and file uploader</a></li>
+                        <li class="last"><a href="form_wizards.html" title="">Wizards</a></li>
+                    </ul>
+                </li>
+                <li><a href="ui_elements.html" title=""><img src="../images/icons/light/users.png" alt="">Interface elements</a></li>
+                <li>
+                    <a href="tables.html" title="" class="exp inactive"><img src="../images/icons/light/frames.png" alt="">Tables<strong>3</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="table_static.html" title="">Static tables</a></li>
+                        <li><a href="table_dynamic.html" title="">Dynamic table</a></li>
+                        <li class="last"><a href="table_sortable_resizable.html" title="">Sortable &amp; resizable tables</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/fullscreen.png" alt="">Widgets and grid<strong>2</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="widgets.html" title="">Widgets</a></li>
+                        <li class="last"><a href="grid.html" title="">Grid</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/alert.png" alt="">Error pages<strong>6</strong></a>
+                    <ul class="sub" style="display: none;">
+                        <li><a href="403.html" title="">403 page</a></li>
+                        <li><a href="404.html" title="">404 page</a></li>
+                        <li><a href="405.html" title="">405 page</a></li>
+                        <li><a href="500.html" title="">500 page</a></li>
+                        <li><a href="503.html" title="">503 page</a></li>
+                        <li class="last"><a href="offline.html" title="">Website is offline</a></li>
+                    </ul>
+                </li>
+                <li><a href="file_manager.html" title=""><img src="../images/icons/light/files.png" alt="">File manager</a></li>
+                <li>
+                    <a href="#" title="" class="exp inactive"><img src="../images/icons/light/create.png" alt="">Other pages<strong>3</strong></a>
+                    <ul style="display: none;">
+                        <li><a href="typography.html" title="">Typography</a></li>
+                        <li><a href="calendar.html" title="">Calendar</a></li>
+                        <li class="last"><a href="gallery.html" title="">Gallery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="cLine"></div>
+    </div>
+
+    <!-- Title area -->
+    <div class="titleArea">
+        <div class="wrapper">
+            <div class="pageTitle">
+                <h5>Single Section Test</h5>
+                <span>Give your test information first.</span>
+            </div>
+            <div class="middleNav">
+                <ul>
+                    <li class="mUser">
+                        <a href="#" title=""><span class="users"></span></a>
+                        <ul class="mSub1">
+                            <li><a href="#" title="">Add user</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="mMessages">
+                        <a href="#" title=""><span class="messages"></span></a>
+                        <ul class="mSub2">
+                            <li><a href="#" title="">New tickets<span class="numberRight">8</span></a></li>
+                            <li><a href="#" title="">Pending tickets<span class="numberRight">12</span></a></li>
+                            <li><a href="#" title="">Closed tickets</a></li>
+                        </ul>
+                    </li>
+                    <li class="mFiles"><a href="#" class="tipN" original-title="Or you can use a tooltip"><span class="files"></span></a></li>
+                    <li class="mOrders">
+                        <a href="#" title=""><span class="orders"></span><span class="numberMiddle">8</span></a>
+                        <ul class="mSub4">
+                            <li><a href="#" title="">Pending uploads</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Trash</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Main content wrapper -->
+    <div class="wrapper">
+
+        <!-- Note -->
+        <!-- Validation form -->
+        <form id="validate" class="form" method="post" action="testadd">
+            <fieldset>
+                <div class="widget">
+                    <div class="title"><img src="../images/icons/dark/pencil.png" alt="" class="titleIcon"><h6>Single Section Test</h6></div>
+                    <div class="formRow">
+                        <label>Test Name<span class="req">*</span></label>
+                        <div class="formRight"><input type="text" class="validate[required]" name="req" id="req"></div><div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <label>Test Type<span class="req">*</span></label>
+                        <div class="formRight">
+                            <div class="selector" id="uniform-undefined">
+                                <span>ALL</span><select name="select2" style="opacity: 0;">
+                                                    
+                                                    <option value="Multiple Choice Questions">Multiple Choice Questions</option>
+                                                    <option value="Fill In The Blanks">Fill In The Blanks</option>
+                                                    <option value="Paragraph Answers">Paragraph Answers</option>
+                                    
+
+                                </select>
+                            </div>
+                        </div><div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <label>Including hint file:<span class="req">*</span></label>
+                        <div class="formRight">
+                            <div class="radio" id="uniform-radio1"><span class="checked"><input type="radio" checked="checked" name="radio1" id="radio1" style="opacity: 0;"></span></div><label for="radio1">YES</label>
+                            <div class="radio" id="uniform-radio2"><span><input type="radio" name="radio1" id="radio2" style="opacity: 0;"></span></div><label for="radio2">NO</label>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <label>Number Of Students<span class="req">*</span></label>
+                        <div class="formRight"><input type="text" class="validate[required,minSize[6]]" name="minValid" id="minValid"></div><div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <label>Number Of Questions<span class="req">*</span></label>
+                        <div class="formRight"><input type="text" class="validate[required,minSize[6]]" name="noquestion" id="minValid"></div><div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <label>Time Required in minutes<span class="req">*</span></label>
+                        <div class="formRight"><input type="text" class="validate[required,minSize[6]]" name="time" id="mtimeinValid"></div><div class="clear"></div>
+                    </div>
+
+                    <div class="formSubmit"><input type="submit" value="submit" class="redB"></div>
+                    <div class="clear"></div>
+                </div>
+
+            </fieldset>
+        </form>
+
+        <!-- Validation form -->
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div id="footer">
+        <div class="wrapper">© As usually all rights reserved. And as usually brought to you by <a href="http://themeforest.net/user/Kopyov?ref=kopyov" title="">Eugene Kopyov</a></div>
+    </div>
+
+</div>
